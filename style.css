@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif; /* Современный шрифт без засечек */
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+p {
+  margin: 0 0 20px 0;
+}
+.wrapper {
+  min-height: calc(100vh - 70px); /* 70px - высота вашего футера */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стили контейнера */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Хедер, лого и навигация */
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo__image {
+  width: 70px;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+.logo__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.navigation {
+  text-align: right;
+}
+
+.navigation__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navigation__item {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.navigation__item:hover {
+  background-color: #054385;
+  color: #fff;
+}
+
+.navigation__item--active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Интро */
+.intro {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  z-index: 0;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.intro__content {
+  position: relative;
+  z-index: 2;
+}
+
+.intro__title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.intro__text {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+/* Основной контент */
+.main {
+  padding: 40px 20px;
+}
+
+.main__text {
+  text-align: center;
+}
+
+.container_cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Отступ между карточками */
+  justify-content: center; /* Центрируем карточки */
+}
+
+.card {
+  flex: 1;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  min-width: 250px;
+  height: 500px;
+}
+
+.card__img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card__info {
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.card__info p {
+  margin: 0;
+}
+
+.card__info_add{
+    position: absolute;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    height: 100%;
+    top: 250px;
+    left: 0px;
+    transition: 0.3s;
+    padding-left: 10px;
+}
+
+.more-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  background: #f0f0f0; /* Цвет фона дополнительной информации */
+  height: 80%;
+}
+
+.outlook-link {
+    color: #ffffff; /* Цвет Outlook */
+    text-decoration: none; /* Убираем подчёркивание */
+    font-family: Arial, sans-serif; /* Шрифт */
+    font-size: 16px; /* Размер текста */
+    text-decoration: underline;
+  }
+  .outlook-link:hover {
+    cursor: pointer; /* Курсор в виде указателя */
+  }
+
+.card:hover .card__info_add {
+    top: 0px;
+  }
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  /* Для планшетов и меньше */
+  .card {
+    flex-basis: calc(50% - 20px); /* Две карточки в ряду, учитывая gap */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Для телефонов и меньше */
+  .card {
+    flex-basis: 100%; /* Одна карточка на всю ширину */
+  }
+}
+
+.footer__content > p {
+  margin-bottom: 5px;
+}
+
+/* Футер */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  border-top: 4px solid #007bff;
+  position: relative;
+  margin-top: auto; /* Автоматический отступ сверху, чтобы прижать футер к низу */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header__content,
+  .intro__content,
+  .main__content,
+  .footer__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navigation__list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .intro__title {
+    font-size: 32px;
+  }
+
+  .intro__text {
+    font-size: 18px;
+  }
+}
