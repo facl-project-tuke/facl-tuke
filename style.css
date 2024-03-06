@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif; /* Современный шрифт без засечек */
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   color: #333;
   line-height: 1.6;
 }
@@ -185,7 +185,33 @@ p {
 }
 
 .main__text {
-  text-align: center;
+  position: relative;
+  font-size: 17px;
+}
+
+.main__text_add{
+  margin-top: 30px;
+}
+
+.main__text::after{
+  content: "";
+  position: absolute;
+  width: 77%;
+  height: 2px;
+  background-color: #b0b0b0;
+  opacity: 0.5;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  bottom: -20px;
+}
+
+.main__img {
+  width: 40%;
+  height: auto;
+  float: right;
+  margin-left: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .container_cards {
@@ -277,12 +303,22 @@ p {
     flex-basis: calc(50% - 20px); /* Две карточки в ряду, учитывая gap */
     height: 760px;
   }
+
+  .main__img {
+    width: 50%;
+  }
 }
 
 @media (max-width: 768px) {
   /* Для телефонов и меньше */
   .card {
     flex-basis: 100%; /* Одна карточка на всю ширину */
+  }
+
+  .main__img {
+    float: none;
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -293,15 +329,20 @@ p {
 .footer__content {
   display: flex;
   justify-content: space-between;
+  /* height: 40px; */
+}
+
+.footer__content p {
+  margin-bottom: 0;
 }
 
 /* Футер */
 .footer {
-  background-color: #333;
+  background-color: #222222;
   color: #fff;
   text-align: center;
   font-size: 14px;
-  border-top: 4px solid #007bff;
+  border-top: 5px solid #007bff;
   position: relative;
   margin-top: auto; /* Автоматический отступ сверху, чтобы прижать футер к низу */
 }
@@ -316,7 +357,7 @@ p {
     text-align: center;
   }
 
-  .card{
+  .card {
     height: 640px;
   }
 
@@ -333,7 +374,7 @@ p {
     font-size: 18px;
   }
 
-  .intro__pdf_img{
+  .intro__pdf_img {
     display: none;
   }
 }
