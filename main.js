@@ -6,10 +6,9 @@ const introContent = document.querySelector(".intro");
 const mainContent = document.querySelector(".main");
 
 const introSection = document.querySelector(".intro");
-const speed = 0.5; // Скорость параллакс эффекта. Можно изменять для разного уровня эффекта.
+const speed = 0.5;
 const offset = window.pageYOffset * speed;
 
-// Изменяем позицию фонового изображения секции intro
 introSection.style.backgroundPosition = "center " + (offset - 50) + "px";
 
 aboutBtn.addEventListener("click", () => {
@@ -30,10 +29,9 @@ homeBtn.addEventListener("click", () => {
 
 document.addEventListener("scroll", function () {
   const introSection = document.querySelector(".intro");
-  const speed = 0.5; // Скорость параллакс эффекта. Можно изменять для разного уровня эффекта.
+  const speed = 0.5;
   const offset = window.pageYOffset * speed;
 
-  // Изменяем позицию фонового изображения секции intro
   introSection.style.backgroundPosition = "center " + (offset - 50) + "px";
 });
 

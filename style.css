@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif; /* Современный шрифт без засечек */
+  font-family: "Roboto", sans-serif; 
   background-color: #ffffff;
   color: #333;
   line-height: 1.6;
@@ -13,19 +13,17 @@ p {
   margin: 0 0 20px 0;
 }
 .wrapper {
-  min-height: calc(100vh - 70px); /* 70px - высота вашего футера */
+  min-height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
 }
 
-/* Стили контейнера */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Хедер, лого и навигация */
 .header {
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -179,7 +177,6 @@ p {
   background-color: #007bff;
 }
 
-/* Основной контент */
 .main {
   padding: 40px 20px;
 }
@@ -274,19 +271,19 @@ p {
   transform: translateY(100%);
   transition: transform 0.3s ease;
   padding: 20px;
-  background: #f0f0f0; /* Цвет фона дополнительной информации */
+  background: #f0f0f0;
   height: 80%;
 }
 
 .outlook-link {
-  color: #ffffff; /* Цвет Outlook */
-  text-decoration: none; /* Убираем подчёркивание */
-  font-family: Arial, sans-serif; /* Шрифт */
-  font-size: 16px; /* Размер текста */
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
   text-decoration: underline;
 }
 .outlook-link:hover {
-  cursor: pointer; /* Курсор в виде указателя */
+  cursor: pointer;
 }
 
 .card:hover .card__info_add {
@@ -298,9 +295,8 @@ p {
 }
 
 @media (max-width: 1024px) {
-  /* Для планшетов и меньше */
   .card {
-    flex-basis: calc(50% - 20px); /* Две карточки в ряду, учитывая gap */
+    flex-basis: calc(50% - 20px);
     height: 760px;
   }
 
@@ -310,9 +306,8 @@ p {
 }
 
 @media (max-width: 768px) {
-  /* Для телефонов и меньше */
   .card {
-    flex-basis: 100%; /* Одна карточка на всю ширину */
+    flex-basis: 100%;
   }
 
   .main__img {
@@ -329,14 +324,12 @@ p {
 .footer__content {
   display: flex;
   justify-content: space-between;
-  /* height: 40px; */
 }
 
 .footer__content p {
   margin-bottom: 0;
 }
 
-/* Футер */
 .footer {
   background-color: #222222;
   color: #fff;
@@ -344,10 +337,9 @@ p {
   font-size: 14px;
   border-top: 5px solid #007bff;
   position: relative;
-  margin-top: auto; /* Автоматический отступ сверху, чтобы прижать футер к низу */
+  margin-top: auto;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .header__content,
   .intro__content,
