@@ -125,7 +125,7 @@ p {
   font-size: 20px;
 }
 
-.intro__pdf{
+.intro__pdf {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,7 +141,7 @@ p {
   cursor: pointer;
 }
 
-.intro__pdf_text{
+.intro__pdf_text {
   color: white;
   text-decoration: none;
   z-index: 2;
@@ -151,7 +151,7 @@ p {
   transition: 0.3s;
 }
 
-.intro__pdf_img{
+.intro__pdf_img {
   position: absolute;
   top: 100px;
   left: 50%;
@@ -166,16 +166,16 @@ p {
   cursor: pointer;
 }
 
-.intro__pdf:hover .intro__pdf_img{
+.intro__pdf:hover .intro__pdf_img {
   top: 0px;
   background-color: #007bff;
 }
 
-.intro__pdf:hover .intro__pdf_text{
+.intro__pdf:hover .intro__pdf_text {
   opacity: 0px;
 }
 
-.intro__pdf:hover{
+.intro__pdf:hover {
   background-color: #007bff;
 }
 
@@ -228,16 +228,16 @@ p {
   margin: 0;
 }
 
-.card__info_add{
-    position: absolute;
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    height: 100%;
-    top: 250px;
-    left: 0px;
-    transition: 0.3s;
-    padding-left: 10px;
+.card__info_add {
+  position: absolute;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  height: 100%;
+  top: 400px;
+  left: 0px;
+  transition: 0.3s;
+  padding-left: 10px;
 }
 
 .more-info {
@@ -253,19 +253,19 @@ p {
 }
 
 .outlook-link {
-    color: #ffffff; /* Цвет Outlook */
-    text-decoration: none; /* Убираем подчёркивание */
-    font-family: Arial, sans-serif; /* Шрифт */
-    font-size: 16px; /* Размер текста */
-    text-decoration: underline;
-  }
-  .outlook-link:hover {
-    cursor: pointer; /* Курсор в виде указателя */
-  }
+  color: #ffffff; /* Цвет Outlook */
+  text-decoration: none; /* Убираем подчёркивание */
+  font-family: Arial, sans-serif; /* Шрифт */
+  font-size: 16px; /* Размер текста */
+  text-decoration: underline;
+}
+.outlook-link:hover {
+  cursor: pointer; /* Курсор в виде указателя */
+}
 
 .card:hover .card__info_add {
-    top: 0px;
-  }
+  top: 0px;
+}
 
 .card:hover {
   transform: translateY(-2px);
@@ -275,6 +275,7 @@ p {
   /* Для планшетов и меньше */
   .card {
     flex-basis: calc(50% - 20px); /* Две карточки в ряду, учитывая gap */
+    height: 760px;
   }
 }
 
@@ -287,6 +288,11 @@ p {
 
 .footer__content > p {
   margin-bottom: 5px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Футер */
@@ -310,6 +316,10 @@ p {
     text-align: center;
   }
 
+  .card{
+    height: 640px;
+  }
+
   .navigation__list {
     flex-direction: column;
     gap: 10px;
@@ -321,5 +331,9 @@ p {
 
   .intro__text {
     font-size: 18px;
+  }
+
+  .intro__pdf_img{
+    display: none;
   }
 }
